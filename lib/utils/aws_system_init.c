@@ -22,14 +22,13 @@
  * http://aws.amazon.com/freertos
  * http://www.FreeRTOS.org
  */
-#ifdef IOT_CONFIG_FILE
-    #include IOT_CONFIG_FILE
-#endif
+
+#include IOT_CONFIG_FILE
 
 #include <stdbool.h>
 
-#include "FreeRTOS.h"
 #include "aws_system_init.h"
+
 #include "iot_mqtt.h"
 
 /* Library code. */

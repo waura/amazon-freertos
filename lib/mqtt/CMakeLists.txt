@@ -4,7 +4,6 @@ afr_module_sources(
     mqtt
     PRIVATE
         "${AFR_MODULES_DIR}/mqtt/aws_mqtt_agent.c"
-        "${AFR_MODULES_DIR}/mqtt/aws_mqtt_lib.c"
         "${AFR_MODULES_DIR}/include/aws_mqtt_agent.h"
         "${AFR_MODULES_DIR}/include/aws_mqtt_lib.h"
         "${AFR_MODULES_DIR}/include/private/aws_mqtt_buffer.h"

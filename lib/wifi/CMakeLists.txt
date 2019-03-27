@@ -8,6 +8,7 @@ afr_module_sources(
 afr_module_include_dirs(
     wifi
     PUBLIC "${AFR_MODULES_DIR}/include"
+           "${AFR_MODULES_DIR}/FreeRTOS-Plus-POSIX/include"
 )
 
 afr_module_dependencies(

@@ -51,15 +51,7 @@ typedef struct iot_sem_internal
 typedef iot_sem_internal_t _IotSystemSemaphore_t;
 
 /**
- * @brief Thread routine function.
- *
- * @param[in] void * The argument passed to the @ref
- * platform_threads_function_createdetachedthread. For application use.
- */
-typedef void ( * IotThreadRoutine_t )( void * );
-
-/**
- * @brief Holds information about an active detached thread so that we can 
+ * @brief Holds information about an active detached thread so that we can
  *        delete the FreeRTOS task when it completes
  */
 typedef struct threadInfo
