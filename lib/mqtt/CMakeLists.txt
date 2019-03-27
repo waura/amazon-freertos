@@ -16,6 +16,8 @@ afr_module_include_dirs(
     mqtt
     PUBLIC
         "${AFR_MODULES_DIR}/include"
+    PRIVATE
+        "${AFR_TESTS_DIR}/mqtt/access"
 )
 
 afr_module_dependencies(
