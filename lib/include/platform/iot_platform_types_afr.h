@@ -57,7 +57,7 @@ typedef iot_sem_internal_t _IotSystemSemaphore_t;
 typedef struct threadInfo
 {
     void * pArgument;                 /**< @brief Argument to `threadRoutine`. */
-    IotThreadRoutine_t threadRoutine; /**< @brief Thread function to run. */
+    void ( *threadRoutine )( void * );/**< @brief Thread function to run. */
 } threadInfo_t;
 
 /**
@@ -66,7 +66,7 @@ typedef struct threadInfo
 typedef struct timerInfo
 {
     TimerHandle_t timer;                    /**< @brief Underlying timer. */
-    IotThreadRoutine_t threadRoutine;       /**< @brief Thread function to run on timer expiration. */
+    void ( *threadRoutine )( void * );      /**< @brief Thread function to run on timer expiration. */
     void * pArgument;                       /**< @brief First argument to threadRoutine. */
     StaticTimer_t xTimerBuffer;             /**< Memory that holds the FreeRTOS timer. */
     TickType_t xTimerPeriod;                /**< Period of this timer. */
