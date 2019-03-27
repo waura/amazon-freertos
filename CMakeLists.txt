@@ -106,7 +106,6 @@ cmake_policy(SET CMP0079 NEW)
 
 if(TARGET aws_demos)
     list(TRANSFORM AFR_DEMOS_ENABLED PREPEND "AFR::")
-    add_compile_definitions(IOT_CONFIG_FILE="iot_demo_config.h")
     target_link_libraries(aws_demos PRIVATE ${AFR_DEMOS_ENABLED})
 endif()
 
